@@ -1,0 +1,194 @@
+<mxfile host="app.diagrams.net" agent="hermes" version="24.0.0">
+  <diagram name="Créer une séance + QR Code" id="seq-creer">
+    <mxGraphModel dx="1300" dy="800" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1" page="1"
+                  pageScale="1" pageWidth="1250" pageHeight="710">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="Diagramme de Séquence UML — Créer une séance + Générer QR Code"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#0f2e59;"
+                vertex="1" parent="1">
+          <mxGeometry x="220" y="8" width="750" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- EN-TÊTES                                                     -->
+        <!-- ============================================================ -->
+        <mxCell id="head-ens" value="Enseignant"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0f2e59;strokeColor=#0a1f3d;fontColor=#fff;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="30" y="55" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-vue" value=":enseignant.php"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a75a8;strokeColor=#2a5588;fontColor=#fff;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="260" y="55" width="150" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-ctrl" value=":PresenceControleur"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#1e7e34;fontColor=#fff;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="510" y="55" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-conn" value=":ConnexionBDD"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d4af37;strokeColor=#b8960f;fontColor=#fff;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="790" y="55" width="150" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-mysql" value="MySQL"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c0392b;strokeColor=#a02d1f;fontColor=#fff;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="55" width="130" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- STÉRÉOTYPES -->
+        <mxCell id="st-ens" value="&lt;&lt;acteur&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#0f2e59;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="30" y="95" width="130" height="15" as="geometry"/></mxCell>
+        <mxCell id="st-vue" value="&lt;&lt;vue&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#3a75a8;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="260" y="95" width="150" height="15" as="geometry"/></mxCell>
+        <mxCell id="st-ctrl" value="&lt;&lt;contrôleur&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#27ae60;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="510" y="95" width="180" height="15" as="geometry"/></mxCell>
+        <mxCell id="st-conn" value="&lt;&lt;modèle&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#b8960f;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="790" y="95" width="150" height="15" as="geometry"/></mxCell>
+        <mxCell id="st-mysql" value="&lt;&lt;SGBD&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#c0392b;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="1040" y="95" width="130" height="15" as="geometry"/></mxCell>
+
+        <!-- ============================================================ -->
+        <!-- LIGNES DE VIE                                                -->
+        <!-- ============================================================ -->
+        <mxCell id="life-ens" value="" style="endArrow=none;html=1;strokeColor=#0f2e59;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="95" y="115" as="sourcePoint"/><mxPoint x="95" y="640" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="life-vue" value="" style="endArrow=none;html=1;strokeColor=#3a75a8;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="335" y="115" as="sourcePoint"/><mxPoint x="335" y="640" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="life-ctrl" value="" style="endArrow=none;html=1;strokeColor=#27ae60;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="600" y="115" as="sourcePoint"/><mxPoint x="600" y="640" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="life-conn" value="" style="endArrow=none;html=1;strokeColor=#d4af37;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="865" y="115" as="sourcePoint"/><mxPoint x="865" y="640" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="life-mysql" value="" style="endArrow=none;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="1105" y="115" as="sourcePoint"/><mxPoint x="1105" y="640" as="targetPoint"/></mxGeometry></mxCell>
+
+        <!-- ============================================================ -->
+        <!-- BARRES D'ACTIVATION                                          -->
+        <!-- ============================================================ -->
+        <mxCell id="act-vue" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a75a8;strokeColor=#2a5588;opacity=35;" vertex="1" parent="1">
+          <mxGeometry x="323" y="150" width="24" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-ctrl" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#1e7e34;opacity=35;" vertex="1" parent="1">
+          <mxGeometry x="588" y="195" width="24" height="320" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-conn" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d4af37;strokeColor=#b8960f;opacity=35;" vertex="1" parent="1">
+          <mxGeometry x="853" y="255" width="24" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-mysql" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c0392b;strokeColor=#a02d1f;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="1093" y="290" width="24" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- MESSAGES                                                     -->
+        <!-- ============================================================ -->
+
+        <!-- 1. Enseignant → vue -->
+        <mxCell id="b1" value="①" style="text;html=1;strokeColor=none;fillColor=#0f2e59;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="195" y="143" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg1" value="Sélectionne cours, date, heure début/fin"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#0f2e59;strokeWidth=2;fontSize=12;fontColor=#0f2e59;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="95" y="151" as="sourcePoint"/><mxPoint x="323" y="151" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 2. vue → contrôleur : POST -->
+        <mxCell id="b2" value="②" style="text;html=1;strokeColor=none;fillColor=#3a75a8;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="445" y="188" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg2" value="POST (cours_id, date_seance, heure_debut, heure_fin)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#3a75a8;strokeWidth=2;fontSize=12;fontColor=#3a75a8;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="347" y="196" as="sourcePoint"/><mxPoint x="588" y="196" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 3. Génération token (self-call) -->
+        <mxCell id="b3" value="③" style="text;html=1;strokeColor=none;fillColor=#8e44ad;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="233" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg3" value="$qr_token = bin2hex(random_bytes(16))"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#8e44ad;strokeWidth=2;fontSize=12;fontColor=#8e44ad;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="612" y="256" as="sourcePoint"/><mxPoint x="612" y="226" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 4. contrôleur → modèle : prepare INSERT -->
+        <mxCell id="b4" value="④" style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="710" y="263" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg4" value="prepare(INSERT INTO seances (cours_id, enseignant_id, ..., qr_code_token) VALUES ...)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#27ae60;strokeWidth=2;fontSize=11;fontColor=#27ae60;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="612" y="280" as="sourcePoint"/><mxPoint x="853" y="280" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 5. modèle → MySQL -->
+        <mxCell id="b5" value="⑤" style="text;html=1;strokeColor=none;fillColor=#d4af37;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="960" y="298" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg5" value="execute([$cours_id, $ens_id, $date, $debut, $fin, $token])"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#d4af37;strokeWidth=2;fontSize=11;fontColor=#b8960f;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="877" y="306" as="sourcePoint"/><mxPoint x="1093" y="306" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 6. MySQL → modèle : OK -->
+        <mxCell id="b6" value="⑥" style="text;html=1;strokeColor=none;fillColor=#c0392b;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="960" y="333" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg6" value="INSERT OK"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;fontSize=12;fontColor=#c0392b;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="1093" y="341" as="sourcePoint"/><mxPoint x="877" y="341" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 7. modèle → contrôleur : succès -->
+        <mxCell id="b7" value="⑦" style="text;html=1;strokeColor=none;fillColor=#d4af37;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="710" y="363" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg7" value="succès"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#d4af37;strokeWidth=2;dashed=1;fontSize=12;fontColor=#b8960f;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="853" y="371" as="sourcePoint"/><mxPoint x="612" y="371" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 8. contrôleur → vue : redirection avec token -->
+        <mxCell id="b8" value="⑧" style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="445" y="403" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg8" value="header(Location: enseignant.php?token_genere=XXXX)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#27ae60;strokeWidth=2;dashed=1;fontSize=11;fontColor=#27ae60;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="588" y="411" as="sourcePoint"/><mxPoint x="347" y="411" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- GÉNÉRATION DU QR CODE (côté vue)                              -->
+        <!-- ============================================================ -->
+        <mxCell id="qr-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#8e44ad;strokeWidth=1.5;opacity=40;" vertex="1" parent="1">
+          <mxGeometry x="265" y="445" width="400" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="qr-label" value="Génération QR Code"
+                style="text;html=1;strokeColor=none;fillColor=#8e44ad;rounded=1;fontColor=#fff;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="275" y="448" width="130" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- 9. Vue : détecte token dans l'URL -->
+        <mxCell id="b9" value="⑨" style="text;html=1;strokeColor=none;fillColor=#8e44ad;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="380" y="478" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg9" value="isset($_GET['token_genere']) → construit l'URL du QR code"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#8e44ad;strokeWidth=2;fontSize=11;fontColor=#8e44ad;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="347" y="501" as="sourcePoint"/><mxPoint x="347" y="471" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 10. Vue → Enseignant : affiche QR code -->
+        <mxCell id="b10" value="⑩" style="text;html=1;strokeColor=none;fillColor=#8e44ad;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="195" y="528" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg10" value="Affiche QR Code (&lt;img src=api.qrserver.com?data=TOKEN&gt;)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#8e44ad;strokeWidth=2;dashed=1;fontSize=11;fontColor=#8e44ad;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="323" y="536" as="sourcePoint"/><mxPoint x="95" y="536" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- NOTES                                                        -->
+        <!-- ============================================================ -->
+        <mxCell id="note1" value="🔑 random_bytes(16) génère 16 octets aléatoires cryptographiquement sûrs.&lt;br&gt;bin2hex() les convertit en chaîne hexa de 32 caractères (le token)."
+                style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontColor=#5d4037;fontSize=11;align=left;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="530" y="580" width="460" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="note2" value="🌐 L'API qrserver.com est appelée côté NAVIGATEUR (balise &lt;img&gt;).&lt;br&gt;Le token transite dans l'URL de redirection, visible dans la barre d'adresse."
+                style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#4a9eed;fontColor=#1a3a5c;fontSize=11;align=left;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="580" width="460" height="40" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
