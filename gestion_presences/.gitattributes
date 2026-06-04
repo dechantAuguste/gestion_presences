@@ -1,0 +1,2 @@
+# Forcer LF dans le repo, laisser git gérer la conversion silencieusement
+* text=auto
