@@ -1,0 +1,270 @@
+<mxfile host="app.diagrams.net" agent="hermes" version="24.0.0">
+  <diagram name="Diagramme de classes SNGP" id="classes">
+    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1" page="1"
+                  pageScale="1" pageWidth="1250" pageHeight="880">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- TITRE -->
+        <mxCell id="title" value="Diagramme de Classes — SNGP (Architecture MVC)"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0f2e59;"
+                vertex="1" parent="1">
+          <mxGeometry x="280" y="10" width="600" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CLASSE : DatabaseConnection                                  -->
+        <!-- ============================================================ -->
+        <mxCell id="cls-db-frame" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="65" width="260" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-db-st" value="&lt;&lt;model&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;fontColor=#b8960f;fontSize=10;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="68" width="260" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-db-name" value="DatabaseConnection"
+                style="text;html=1;strokeColor=none;fillColor=#d4af37;fontColor=#fff;fontSize=14;fontStyle=1;align=center;"
+                vertex="1" parent="1">
+          <mxGeometry x="460" y="86" width="260" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-db-sep1" value="" style="endArrow=none;html=1;strokeColor=#b8960f;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="460" y="116" as="sourcePoint"/><mxPoint x="720" y="116" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-db-attrs" value="- $host : string&lt;br&gt;- $dbname : string&lt;br&gt;- $username : string&lt;br&gt;- $password : string&lt;br&gt;+ $bdd : PDO"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="462" y="118" width="256" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-db-sep2" value="" style="endArrow=none;html=1;strokeColor=#b8960f;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="460" y="190" as="sourcePoint"/><mxPoint x="720" y="190" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-db-meth" value="+ __construct()&lt;br&gt;+ getConnection(): PDO"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="462" y="192" width="256" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CLASSE : AuthController                                      -->
+        <!-- ============================================================ -->
+        <mxCell id="cls-auth-frame" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="320" width="290" height="195" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-auth-st" value="&lt;&lt;controller&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;fontColor=#1e7e34;fontSize=10;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="323" width="290" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-auth-name" value="AuthController"
+                style="text;html=1;strokeColor=none;fillColor=#27ae60;fontColor=#fff;fontSize=14;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="341" width="290" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-auth-sep1" value="" style="endArrow=none;html=1;strokeColor=#1e7e34;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="30" y="371" as="sourcePoint"/><mxPoint x="320" y="371" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-auth-attrs" value="- $userModel : UserModel&lt;br&gt;- $sessionTimeout : int = 1800"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="32" y="374" width="286" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-auth-sep2" value="" style="endArrow=none;html=1;strokeColor=#1e7e34;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="30" y="416" as="sourcePoint"/><mxPoint x="320" y="416" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-auth-meth" value="+ login(matricule, password): void&lt;br&gt;+ logout(): void&lt;br&gt;+ checkSession(): bool&lt;br&gt;+ redirectByRole(role): void"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="32" y="419" width="286" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CLASSE : PresenceController                                  -->
+        <!-- ============================================================ -->
+        <mxCell id="cls-pres-frame" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="840" y="320" width="320" height="225" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-pres-st" value="&lt;&lt;controller&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;fontColor=#1e7e34;fontSize=10;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="323" width="320" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-pres-name" value="PresenceController"
+                style="text;html=1;strokeColor=none;fillColor=#27ae60;fontColor=#fff;fontSize=14;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="341" width="320" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-pres-sep1" value="" style="endArrow=none;html=1;strokeColor=#1e7e34;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="840" y="371" as="sourcePoint"/><mxPoint x="1160" y="371" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-pres-attrs" value="- $presenceModel : PresenceModel&lt;br&gt;- $tokenLength : int = 32"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="842" y="374" width="316" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-pres-sep2" value="" style="endArrow=none;html=1;strokeColor=#1e7e34;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="840" y="416" as="sourcePoint"/><mxPoint x="1160" y="416" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-pres-meth" value="+ createSeance(cours_id, date, debut, fin): string&lt;br&gt;+ generateToken(): string&lt;br&gt;+ registerPresence(token, etudiant_id): void&lt;br&gt;+ validateManually(presence_id, statut): void&lt;br&gt;+ getAttendance(seance_id): array"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="842" y="419" width="316" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CLASSE : UserModel                                           -->
+        <!-- ============================================================ -->
+        <mxCell id="cls-um-frame" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="590" width="290" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-um-st" value="&lt;&lt;model&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;fontColor=#b8960f;fontSize=10;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="593" width="290" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-um-name" value="UserModel"
+                style="text;html=1;strokeColor=none;fillColor=#d4af37;fontColor=#fff;fontSize=14;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="611" width="290" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-um-sep1" value="" style="endArrow=none;html=1;strokeColor=#b8960f;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="30" y="641" as="sourcePoint"/><mxPoint x="320" y="641" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-um-attrs" value="- $db : PDO&lt;br&gt;- $table : string = 'utilisateurs'"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="32" y="644" width="286" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-um-sep2" value="" style="endArrow=none;html=1;strokeColor=#b8960f;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="30" y="681" as="sourcePoint"/><mxPoint x="320" y="681" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-um-meth" value="+ findByMatricule(m): User | null&lt;br&gt;+ findById(id): User | null&lt;br&gt;+ create(data): int&lt;br&gt;+ update(id, data): bool&lt;br&gt;+ delete(id): bool&lt;br&gt;+ getAll(): array"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="32" y="684" width="286" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CLASSE : PresenceModel                                       -->
+        <!-- ============================================================ -->
+        <mxCell id="cls-pm-frame" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="870" y="610" width="290" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-pm-st" value="&lt;&lt;model&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;fontColor=#b8960f;fontSize=10;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="870" y="613" width="290" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-pm-name" value="PresenceModel"
+                style="text;html=1;strokeColor=none;fillColor=#d4af37;fontColor=#fff;fontSize=14;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="870" y="631" width="290" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-pm-sep1" value="" style="endArrow=none;html=1;strokeColor=#b8960f;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="870" y="661" as="sourcePoint"/><mxPoint x="1160" y="661" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-pm-attrs" value="- $db : PDO&lt;br&gt;- $tableSeance : string = 'seances'&lt;br&gt;- $tablePresence : string = 'presences'"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="872" y="664" width="286" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-pm-sep2" value="" style="endArrow=none;html=1;strokeColor=#b8960f;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="870" y="711" as="sourcePoint"/><mxPoint x="1160" y="711" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="cls-pm-meth" value="+ findSeanceByToken(t): array | null&lt;br&gt;+ createSeance(data): int&lt;br&gt;+ registerPresence(s_id, e_id): bool&lt;br&gt;+ getStudentHistory(e_id): array&lt;br&gt;+ getSeanceStats(s_id): array&lt;br&gt;+ updateStatus(p_id, status): bool"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#555;spacingLeft=10;spacingTop=3;"
+                vertex="1" parent="1">
+          <mxGeometry x="872" y="714" width="286" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- RELATIONS                                                    -->
+        <!-- ============================================================ -->
+
+        <!-- DatabaseConnection → AuthController (association) -->
+        <mxCell id="rel-db-auth" value="" style="endArrow=none;html=1;strokeColor=#666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="155" as="sourcePoint"/>
+            <mxPoint x="175" y="320" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-db-auth-label" value="utilise ►"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=2;fontColor=#666;"
+                vertex="1" parent="1">
+          <mxGeometry x="260" y="220" width="65" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- DatabaseConnection → PresenceController -->
+        <mxCell id="rel-db-presc" value="" style="endArrow=none;html=1;strokeColor=#666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="155" as="sourcePoint"/>
+            <mxPoint x="1000" y="320" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-db-presc-label" value="utilise ►"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=2;fontColor=#666;"
+                vertex="1" parent="1">
+          <mxGeometry x="880" y="230" width="65" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- AuthController → UserModel -->
+        <mxCell id="rel-auth-um" value="" style="endArrow=none;html=1;strokeColor=#666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="515" as="sourcePoint"/>
+            <mxPoint x="120" y="590" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-auth-um-label" value="délègue ►"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=2;fontColor=#666;"
+                vertex="1" parent="1">
+          <mxGeometry x="130" y="545" width="70" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- PresenceController → PresenceModel -->
+        <mxCell id="rel-presc-pm" value="" style="endArrow=none;html=1;strokeColor=#666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="545" as="sourcePoint"/>
+            <mxPoint x="1000" y="610" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-presc-pm-label" value="délègue ►"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=2;fontColor=#666;"
+                vertex="1" parent="1">
+          <mxGeometry x="1010" y="570" width="70" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- UserModel → DatabaseConnection -->
+        <mxCell id="rel-um-db" value="" style="endArrow=none;html=1;strokeColor=#666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="175" y="590" as="sourcePoint"/>
+            <mxPoint x="590" y="245" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-um-db-label" value="utilise ►"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=2;fontColor=#666;"
+                vertex="1" parent="1">
+          <mxGeometry x="360" y="410" width="65" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- PresenceModel → DatabaseConnection -->
+        <mxCell id="rel-pm-db" value="" style="endArrow=none;html=1;strokeColor=#666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="610" as="sourcePoint"/>
+            <mxPoint x="590" y="245" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-pm-db-label" value="utilise ►"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=2;fontColor=#666;"
+                vertex="1" parent="1">
+          <mxGeometry x="780" y="415" width="65" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- LÉGENDE                                                      -->
+        <!-- ============================================================ -->
+        <mxCell id="leg-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#ccc;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="810" width="1080" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg-t" value="Légende  —  + public    - privé    # protégé    &lt;&lt;stereotype&gt;&gt; = rôle architectural    ► = dépendance"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#555;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="820" width="1060" height="35" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
