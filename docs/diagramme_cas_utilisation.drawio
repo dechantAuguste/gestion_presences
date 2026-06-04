@@ -219,7 +219,7 @@
         <!-- RELATIONS : Include / Extend entre cas d'utilisation          -->
         <!-- ============================================================ -->
 
-        <!-- Créer une séance --<<include>>--> Générer QR Code -->
+        <!-- Créer une séance  == include == > Générer QR Code -->
         <mxCell id="rel-include-qr" value="&lt;&lt;include&gt;&gt;"
                 style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;
                        jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1.5;
