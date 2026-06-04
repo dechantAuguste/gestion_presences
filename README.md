@@ -1,6 +1,6 @@
 # SNGP — Système Numérique de Gestion des Présences Universitaires
 
-Projet Tutoré L1 Génie Informatique — Faculté des Sciences, 2025-2026
+Projet Tutoré L1 Génie Informatique — Faculté des Sciences et Technologie (ULPGL), 2025-2026
 
 ---
 
@@ -122,7 +122,7 @@ git clone https://github.com/dechantAuguste/gestion_presences.git
 
 | Rôle | Responsable | Tâches principales |
 |---|---|---|
-| **Chef de Projet** | Idris | Coordination, planning, suivi, README |
+| **Chef de Projet** | — | Coordination, planning, suivi, README |
 | **DB Admin** | — | Modélisation MCD/MLD, `database.sql`, `connexion_bdd.php` |
 | **Lead Backend** | — | Contrôleurs (`auth`, `presence`), modèles, routeur `index.php` |
 | **Lead Frontend** | — | Vues (`login`, `dashboard`, `enseignant`), `style.css` |
@@ -162,4 +162,4 @@ Tables à créer :
 
 ## Licence
 
-Projet éducatif — Usage interne Faculté des Sciences.
+Projet éducatif — Usage interne Faculté des Sciences Et Technogie (ULPGL).
