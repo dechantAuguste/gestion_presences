@@ -2,7 +2,7 @@
   <diagram name="Consulter historique" id="seq-historique">
     <mxGraphModel dx="1100" dy="700" grid="1" gridSize="10" guides="1"
                   tooltips="1" connect="1" arrows="1" fold="1" page="1"
-                  pageScale="1" pageWidth="1050" pageHeight="640">
+                  pageScale="1" pageWidth="1050" pageHeight="650">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -79,7 +79,7 @@
         <mxCell id="b3" value="③" style="text;html=1;strokeColor=none;fillColor=#3a75a8;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="480" y="248" width="20" height="18" as="geometry"/>
         </mxCell>
-        <mxCell id="msg3" value="prepare(SELECT p.*, s.date_seance, c.titre FROM presences p JOIN seances s ... JOIN cours c ... WHERE p.etudiant_id = ? ORDER BY ...)"
+        <mxCell id="msg3" value="prepare(SELECT ... JOIN presences, seances, cours WHERE etudiant_id = ?)"
                 style="endArrow=block;endFill=1;html=1;strokeColor=#3a75a8;strokeWidth=2;fontSize=10;fontColor=#3a75a8;fontStyle=1;" edge="1" parent="1">
           <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="377" y="265" as="sourcePoint"/><mxPoint x="623" y="265" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
         </mxCell>
@@ -153,9 +153,9 @@
         </mxCell>
 
         <!-- Note -->
-        <mxCell id="note" value="📊 La requête utilise 2 JOIN : presences → seances → cours pour afficher le titre du cours et la date directement."
+        <mxCell id="note" value="📊 Requête complète : SELECT p.*, s.date_seance, c.titre FROM presences p JOIN seances s ON p.seance_id = s.id JOIN cours c ON s.cours_id = c.id WHERE p.etudiant_id = ? ORDER BY p.date_enregistrement DESC"
                 style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#4a9eed;fontColor=#1a3a5c;fontSize=11;align=left;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
-          <mxGeometry x="180" y="575" width="620" height="35" as="geometry"/>
+          <mxGeometry x="45" y="565" width="900" height="45" as="geometry"/>
         </mxCell>
 
       </root>
