@@ -1,0 +1,219 @@
+<mxfile host="app.diagrams.net" agent="hermes" version="24.0.0">
+  <diagram name="MCD SNGP" id="mcd">
+    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1" page="1"
+                  pageScale="1" pageWidth="1250" pageHeight="880">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- TITRE -->
+        <mxCell id="title" value="MCD — Modèle Conceptuel de Données — SNGP"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0f2e59;"
+                vertex="1" parent="1">
+          <mxGeometry x="280" y="10" width="600" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- ENTITÉS                                                      -->
+        <!-- ============================================================ -->
+
+        <!-- UTILISATEUR (haut-centre) -->
+        <mxCell id="ent-user" value=""
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#4a9eed;strokeWidth=2;"
+                vertex="1" parent="1">
+          <mxGeometry x="450" y="70" width="280" height="185" as="geometry"/>
+        </mxCell>
+        <mxCell id="ent-user-name" value="UTILISATEUR"
+                style="text;html=1;strokeColor=none;fillColor=#4a9eed;rounded=0;fontColor=#fff;fontSize=14;fontStyle=1;align=center;"
+                vertex="1" parent="1">
+          <mxGeometry x="450" y="70" width="280" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ent-user-attrs" value="&lt;u&gt;id&lt;/u&gt;&lt;br&gt;matricule (UNIQUE)&lt;br&gt;nom&lt;br&gt;prenom&lt;br&gt;email (UNIQUE)&lt;br&gt;mot_de_passe&lt;br&gt;role {etudiant, enseignant, administrateur}"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#0f2e59;spacingLeft=12;spacingTop=5;"
+                vertex="1" parent="1">
+          <mxGeometry x="452" y="102" width="276" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- COURS (gauche) -->
+        <mxCell id="ent-cours" value=""
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;strokeWidth=2;"
+                vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="250" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="ent-cours-name" value="COURS"
+                style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=0;fontColor=#fff;fontSize=14;fontStyle=1;align=center;"
+                vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="250" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ent-cours-attrs" value="&lt;u&gt;id&lt;/u&gt;&lt;br&gt;code_cours (UNIQUE)&lt;br&gt;titre&lt;br&gt;description (facultatif)"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#1e7e34;spacingLeft=12;spacingTop=5;"
+                vertex="1" parent="1">
+          <mxGeometry x="62" y="412" width="246" height="105" as="geometry"/>
+        </mxCell>
+
+        <!-- SEANCE (centre) -->
+        <mxCell id="ent-seance" value=""
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;strokeWidth=2;"
+                vertex="1" parent="1">
+          <mxGeometry x="450" y="370" width="280" height="195" as="geometry"/>
+        </mxCell>
+        <mxCell id="ent-seance-name" value="SEANCE"
+                style="text;html=1;strokeColor=none;fillColor=#d4af37;rounded=0;fontColor=#fff;fontSize=14;fontStyle=1;align=center;"
+                vertex="1" parent="1">
+          <mxGeometry x="450" y="370" width="280" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ent-seance-attrs" value="&lt;u&gt;id&lt;/u&gt;&lt;br&gt;date_seance&lt;br&gt;heure_debut&lt;br&gt;heure_fin&lt;br&gt;qr_code_token (UNIQUE)&lt;br&gt;#cours_id → COURS&lt;br&gt;#enseignant_id → UTILISATEUR"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#7d6608;spacingLeft=12;spacingTop=5;"
+                vertex="1" parent="1">
+          <mxGeometry x="452" y="402" width="276" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- PRESENCE (droite) -->
+        <mxCell id="ent-presence" value=""
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#c0392b;strokeWidth=2;"
+                vertex="1" parent="1">
+          <mxGeometry x="870" y="390" width="270" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="ent-presence-name" value="PRESENCE"
+                style="text;html=1;strokeColor=none;fillColor=#c0392b;rounded=0;fontColor=#fff;fontSize=14;fontStyle=1;align=center;"
+                vertex="1" parent="1">
+          <mxGeometry x="870" y="390" width="270" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ent-presence-attrs" value="&lt;u&gt;id&lt;/u&gt;&lt;br&gt;date_enregistrement&lt;br&gt;statut {present, en_retard, absent}&lt;br&gt;#seance_id → SEANCE&lt;br&gt;#etudiant_id → UTILISATEUR&lt;br&gt;&lt;i&gt;UNIQUE(seance_id, etudiant_id)&lt;/i&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#922b21;spacingLeft=12;spacingTop=5;"
+                vertex="1" parent="1">
+          <mxGeometry x="872" y="422" width="266" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- RELATIONS (lignes avec cardinalités)                          -->
+        <!-- ============================================================ -->
+
+        <!-- UTILISATEUR → SEANCE (Créer) -->
+        <mxCell id="rel1-line" value="" style="endArrow=none;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="255" as="sourcePoint"/>
+            <mxPoint x="540" y="370" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1-card1" value="(0,n)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="505" y="280" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel1-label" value="Créer"
+                style="text;html=1;strokeColor=none;fillColor=#fff;rounded=1;fontColor=#0f2e59;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="548" y="305" width="45" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel1-card2" value="(1,1)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="550" y="345" width="40" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- COURS → SEANCE (Porter sur) -->
+        <mxCell id="rel2-line" value="" style="endArrow=none;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="450" as="sourcePoint"/>
+            <mxPoint x="450" y="450" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2-card1" value="(1,1)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="325" y="425" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel2-label" value="Porter sur"
+                style="text;html=1;strokeColor=none;fillColor=#fff;rounded=1;fontColor=#0f2e59;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="360" y="445" width="60" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel2-card2" value="(0,n)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="435" y="425" width="40" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- UTILISATEUR → PRESENCE (Enregistrer) -->
+        <mxCell id="rel3-line" value="" style="endArrow=none;html=1;strokeColor=#666666;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="730" y="200" as="sourcePoint"/>
+            <mxPoint x="930" y="390" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3-card1" value="(0,n)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="765" y="260" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel3-label" value="Enregistrer"
+                style="text;html=1;strokeColor=none;fillColor=#fff;rounded=1;fontColor=#0f2e59;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="810" y="290" width="70" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel3-card2" value="(0,n)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="875" y="365" width="40" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- SEANCE → PRESENCE (Concerner) -->
+        <mxCell id="rel4-line" value="" style="endArrow=none;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="730" y="450" as="sourcePoint"/>
+            <mxPoint x="870" y="450" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4-card1" value="(1,n)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="745" y="425" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel4-label" value="Concerner"
+                style="text;html=1;strokeColor=none;fillColor=#fff;rounded=1;fontColor=#0f2e59;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="775" y="445" width="65" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel4-card2" value="(0,n)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="855" y="425" width="40" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- LÉGENDE                                                      -->
+        <!-- ============================================================ -->
+        <mxCell id="legend-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#ccc;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="1100" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-title" value="Légende"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#333;align=left;"
+                vertex="1" parent="1">
+          <mxGeometry x="80" y="608" width="80" height="22" as="geometry"/>
+        </mxCell>
+
+        <!-- Légende notation -->
+        <mxCell id="leg1" value="&lt;u&gt;id&lt;/u&gt; = clé primaire"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#555;align=left;" vertex="1" parent="1">
+          <mxGeometry x="80" y="635" width="150" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg2" value="#champ → ENTITÉ = clé étrangère"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#555;align=left;" vertex="1" parent="1">
+          <mxGeometry x="80" y="660" width="250" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg3" value="(min, max)    (0,n) = zéro à plusieurs    (1,1) = exactement un    (1,n) = au moins un"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#555;align=left;" vertex="1" parent="1">
+          <mxGeometry x="400" y="635" width="520" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg4" value="{valeur1, valeur2} = type énuméré (ENUM en SQL)"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#555;align=left;" vertex="1" parent="1">
+          <mxGeometry x="400" y="660" width="340" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg5" value="UNIQUE(champ1, champ2) = contrainte d'unicité composite (empêche les doublons)"
+                style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#555;align=left;" vertex="1" parent="1">
+          <mxGeometry x="400" y="680" width="500" height="18" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- NOTE PÉDAGOGIQUE                                             -->
+        <!-- ============================================================ -->
+        <mxCell id="note-box" value="Note MCD : PRESENCE est une &lt;b&gt;entité associative&lt;/b&gt; issue de la relation N:N entre UTILISATEUR (rôle étudiant) et SEANCE.&lt;br&gt;Elle porte des attributs propres (date_enregistrement, statut) que la simple relation ne pourrait pas stocker."
+                style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#4a9eed;fontColor=#1a3a5c;fontSize=11;align=left;spacingLeft=10;spacingRight=10;"
+                vertex="1" parent="1">
+          <mxGeometry x="60" y="720" width="1100" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- Note normalisation -->
+        <mxCell id="norm-box" value="📐 Normalisation : le schéma respecte la &lt;b&gt;3FN&lt;/b&gt; — chaque attribut dépend de la clé primaire entière, pas de dépendance transitive.&#xa;La table UTILISATEUR regroupe tous les rôles (étudiant, enseignant, admin) via le champ ENUM &lt;b&gt;role&lt;/b&gt; plutôt que de créer 3 tables séparées."
+                style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontColor=#5d4037;fontSize=11;align=left;spacingLeft=10;spacingRight=10;"
+                vertex="1" parent="1">
+          <mxGeometry x="60" y="780" width="1100" height="50" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
