@@ -1,0 +1,44 @@
+/* ============================================================
+   SNGP — Palette Académique
+   ============================================================
+
+   Couleurs :
+     --primary:    #0f2e59  (Bleu Oxford)
+     --secondary:  #3a75a8  (Bleu Steel)
+     --accent:     #d4af37  (Or)
+     --background: #f7f9fc  (Fond clair)
+     --success:    #27ae60  (Vert)
+     --error:      #c0392b  (Rouge)
+     --text:       #2c3e50  (Texte)
+     --text-light: #7f8c8d  (Texte secondaire)
+     --white:      #ffffff
+     --border:     #e1e8ed
+
+   Polices : 'Inter', 'Fira Sans', sans-serif
+
+   TODO:
+   - Reset CSS (box-sizing, marges)
+   - Styles de la page login (.login-container, .login-card)
+   - Header (.header) avec fond primary
+   - Cartes (.card) avec bordure légère
+   - Formulaires (.form-group, input, select, focus)
+   - Boutons (.btn, .btn-primary, .btn-outline)
+   - Tableaux (.table) avec hover
+   - Badges (.badge-present, .badge-en-retard, .badge-absent)
+   - Alertes (.alert-error)
+   - QR code (.qr-code)
+   - Responsive (max-width: 768px)
+   ============================================================ */
+
+:root {
+    --primary: #0f2e59;
+    --secondary: #3a75a8;
+    --accent: #d4af37;
+    --background: #f7f9fc;
+    --success: #27ae60;
+    --error: #c0392b;
+    --text: #2c3e50;
+    --text-light: #7f8c8d;
+    --white: #ffffff;
+    --border: #e1e8ed;
+}
