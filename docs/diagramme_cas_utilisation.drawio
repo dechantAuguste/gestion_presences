@@ -1,294 +1,124 @@
-<mxfile host="app.diagrams.net" agent="hermes" version="24.0.0">
-  <diagram name="Cas d'utilisation SNGP" id="uc-sngp">
-    <mxGraphModel dx="1434" dy="944" grid="1" gridSize="10" guides="1"
-                  tooltips="1" connect="1" arrows="1" fold="1" page="1"
-                  pageScale="1" pageWidth="1200" pageHeight="950">
+<mxfile host="app.diagrams.net" agent="hermes">
+  <diagram name="Cas d&#39;utilisation SNGP" id="uc-sngp">
+    <mxGraphModel dx="1157" dy="498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="950" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <!-- ============================================================ -->
-        <!-- FRONTIÈRE DU SYSTÈME                                         -->
-        <!-- ============================================================ -->
-        <mxCell id="sys-boundary" value="SNGP — Système Numérique de Gestion des Présences"
-                style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0f2e59;
-                       strokeWidth=2;dashed=1;dashPattern=8 4;fontSize=14;fontStyle=1;
-                       fontColor=#0f2e59;verticalAlign=top;align=left;spacingLeft=15;spacingTop=5;"
-                vertex="1" parent="1">
-          <mxGeometry x="210" y="60" width="920" height="800" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YEhCuzTfeC7jsnpgU1j5-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#808080;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="820" width="690" x="160" y="20" as="geometry" />
         </mxCell>
-
-        <!-- ============================================================ -->
-        <!-- ACTEURS (stick figures UML)                                  -->
-        <!-- ============================================================ -->
-        <!-- Étudiant -->
-        <mxCell id="actor-etudiant" value="Étudiant"
-                style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;
-                       html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#4a9eed;"
-                vertex="1" parent="1">
-          <mxGeometry x="30" y="130" width="60" height="120" as="geometry"/>
+        <mxCell id="rel-adm-auth" edge="1" parent="1" source="actor-admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d4af37;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-authentifier">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Enseignant -->
-        <mxCell id="actor-enseignant" value="Enseignant"
-                style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;
-                       html=1;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#27ae60;"
-                vertex="1" parent="1">
-          <mxGeometry x="30" y="370" width="60" height="120" as="geometry"/>
+        <mxCell id="rel-ens-auth" edge="1" parent="1" source="actor-enseignant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-authentifier">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Administrateur -->
-        <mxCell id="actor-admin" value="Administrateur"
-                style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;
-                       html=1;outlineConnect=0;fillColor=#fff2cc;strokeColor=#d4af37;"
-                vertex="1" parent="1">
-          <mxGeometry x="30" y="610" width="60" height="120" as="geometry"/>
+        <mxCell id="actor-etudiant" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;                        html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#4a9eed;" value="Étudiant" vertex="1">
+          <mxGeometry height="120" width="60" x="30" y="130" as="geometry" />
         </mxCell>
-
-        <!-- ============================================================ -->
-        <!-- CAS D'UTILISATION (ellipses)                                 -->
-        <!-- ============================================================ -->
-
-        <!-- Colonne 1 : Cas Étudiant -->
-        <mxCell id="uc-scan-qr" value="Scanner QR Code"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#4a9eed;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="290" y="100" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc-historique" value="Consulter historique"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#4a9eed;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="290" y="200" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <!-- Cas commun : S'authentifier -->
-        <mxCell id="uc-authentifier" value="S'authentifier"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;
-                       fontStyle=1;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="290" y="380" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <!-- Colonne 2 : Cas Enseignant -->
-        <mxCell id="uc-creer-seance" value="Créer une séance"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="580" y="320" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc-generer-qr" value="Générer QR Code"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="870" y="200" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc-valider-presence" value="Valider présence"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="580" y="450" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc-suivre-assiduite" value="Suivre assiduité"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="580" y="580" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <!-- Colonne 3 : Cas Administrateur -->
-        <mxCell id="uc-rapport-pdf" value="Générer rapport PDF"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="580" y="730" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc-gerer-utilisateurs" value="Gérer les utilisateurs"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="870" y="500" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc-gerer-cours" value="Gérer les cours"
-                style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;
-                       fontStyle=0;fontSize=13;"
-                vertex="1" parent="1">
-          <mxGeometry x="870" y="620" width="180" height="65" as="geometry"/>
-        </mxCell>
-
-        <!-- ============================================================ -->
-        <!-- RELATIONS : Association Acteur → Cas d'utilisation            -->
-        <!-- ============================================================ -->
-
-        <!-- Étudiant → S'authentifier -->
-        <mxCell id="rel-e-auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4a9eed;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-etudiant" target="uc-authentifier">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Étudiant → Scanner QR Code -->
-        <mxCell id="rel-e-scan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4a9eed;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-etudiant" target="uc-scan-qr">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Étudiant → Consulter historique -->
-        <mxCell id="rel-e-hist" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4a9eed;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-etudiant" target="uc-historique">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Enseignant → S'authentifier -->
-        <mxCell id="rel-ens-auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-enseignant" target="uc-authentifier">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Enseignant → Créer une séance -->
-        <mxCell id="rel-ens-creer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-enseignant" target="uc-creer-seance">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Enseignant → Valider présence -->
-        <mxCell id="rel-ens-val" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-enseignant" target="uc-valider-presence">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Enseignant → Suivre assiduité -->
-        <mxCell id="rel-ens-suivre" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-enseignant" target="uc-suivre-assiduite">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Administrateur → S'authentifier -->
-        <mxCell id="rel-adm-auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d4af37;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-admin" target="uc-authentifier">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Administrateur → Générer rapport PDF -->
-        <mxCell id="rel-adm-pdf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d4af37;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-admin" target="uc-rapport-pdf">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Administrateur → Gérer utilisateurs -->
-        <mxCell id="rel-adm-users" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d4af37;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-admin" target="uc-gerer-utilisateurs">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Administrateur → Gérer cours -->
-        <mxCell id="rel-adm-cours" style="edgeStyle=orthogonalEdgeStyle;rounded=0;
-                       orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d4af37;
-                       strokeWidth=2;endArrow=none;endFill=0;"
-                edge="1" parent="1" source="actor-admin" target="uc-gerer-cours">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ============================================================ -->
-        <!-- RELATIONS : Include / Extend entre cas d'utilisation          -->
-        <!-- ============================================================ -->
-
-        <!-- Créer une séance  == include == > Générer QR Code -->
-        <mxCell id="rel-include-qr" value="&lt;&lt;include&gt;&gt;"
-                style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;
-                       jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1.5;
-                       dashed=1;endArrow=open;endSize=12;fontSize=11;fontColor=#666666;"
-                edge="1" parent="1" source="uc-creer-seance" target="uc-generer-qr">
-          <mxGeometry x="0.2" y="-20" relative="1" as="geometry">
-            <mxPoint as="offset"/>
+        <mxCell id="YEhCuzTfeC7jsnpgU1j5-4" edge="1" parent="1" source="actor-enseignant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#27AE60,#FFFFFF);endArrow=none;endFill=0;" target="uc-suivre-assiduite">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="430" />
+              <mxPoint x="370" y="413" />
+            </Array>
           </mxGeometry>
         </mxCell>
-
-        <!-- ============================================================ -->
-        <!-- LÉGENDE                                                      -->
-        <!-- ============================================================ -->
-        <mxCell id="legend-box" value=""
-                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#cccccc;
-                       strokeWidth=1;"
-                vertex="1" parent="1">
-          <mxGeometry x="230" y="880" width="600" height="55" as="geometry"/>
+        <mxCell id="actor-enseignant" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;                        html=1;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#27ae60;" value="Enseignant" vertex="1">
+          <mxGeometry height="120" width="60" x="30" y="370" as="geometry" />
         </mxCell>
-
-        <mxCell id="legend-title" value="Légende :"
-                style="text;html=1;strokeColor=none;fillColor=none;align=left;
-                       verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#333333;"
-                vertex="1" parent="1">
-          <mxGeometry x="245" y="885" width="70" height="20" as="geometry"/>
+        <mxCell id="actor-admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;                        html=1;outlineConnect=0;fillColor=#fff2cc;strokeColor=#d4af37;" value="Administrateur" vertex="1">
+          <mxGeometry height="120" width="60" x="30" y="610" as="geometry" />
         </mxCell>
-
-        <!-- Ligne association -->
-        <mxCell id="legend-assoc-line" value=""
-                style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=2;"
-                edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="330" y="905" as="sourcePoint"/>
-            <mxPoint x="400" y="905" as="targetPoint"/>
+        <mxCell id="uc-scan-qr" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#4a9eed;                        fontStyle=0;fontSize=13;" value="Scanner QR Code" vertex="1">
+          <mxGeometry height="65" width="180" x="290" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-historique" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#4a9eed;                        fontStyle=0;fontSize=13;" value="Consulter historique" vertex="1">
+          <mxGeometry height="65" width="180" x="290" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-authentifier" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;                        fontStyle=1;fontSize=13;" value="S&#39;authentifier" vertex="1">
+          <mxGeometry height="65" width="180" x="650" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-creer-seance" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;                        fontStyle=0;fontSize=13;" value="Créer une séance" vertex="1">
+          <mxGeometry height="65" width="180" x="300" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-generer-qr" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;                        fontStyle=0;fontSize=13;" value="Générer QR Code" vertex="1">
+          <mxGeometry height="65" width="180" x="555" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-valider-presence" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;                        fontStyle=0;fontSize=13;" value="Valider présence" vertex="1">
+          <mxGeometry height="65" width="180" x="305" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-suivre-assiduite" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#27ae60;                        fontStyle=0;fontSize=13;" value="Suivre assiduité" vertex="1">
+          <mxGeometry height="65" width="180" x="410" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-rapport-pdf" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;                        fontStyle=0;fontSize=13;" value="Générer rapport PDF" vertex="1">
+          <mxGeometry height="65" width="180" x="305" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-gerer-utilisateurs" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;                        fontStyle=0;fontSize=13;" value="Gérer les utilisateurs" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-gerer-cours" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d4af37;                        fontStyle=0;fontSize=13;" value="Gérer les cours" vertex="1">
+          <mxGeometry height="65" width="180" x="400" y="637.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-e-auth" edge="1" parent="1" source="actor-etudiant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4a9eed;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-authentifier">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-e-scan" edge="1" parent="1" source="actor-etudiant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4a9eed;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-scan-qr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-e-hist" edge="1" parent="1" source="actor-etudiant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4a9eed;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-historique">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-ens-val" edge="1" parent="1" source="actor-enseignant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-valider-presence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-adm-pdf" edge="1" parent="1" source="actor-admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d4af37;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-rapport-pdf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-adm-users" edge="1" parent="1" source="actor-admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d4af37;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-gerer-utilisateurs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-adm-cours" edge="1" parent="1" source="actor-admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;                        orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d4af37;                        strokeWidth=2;endArrow=none;endFill=0;" target="uc-gerer-cours">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-include-qr" edge="1" parent="1" source="uc-creer-seance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;                        jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1.5;                        dashed=1;endArrow=open;endSize=12;fontSize=11;fontColor=#666666;" target="uc-generer-qr" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" x="0.2" y="-20" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="legend-assoc-text" value="Association"
-                style="text;html=1;strokeColor=none;fillColor=none;align=left;
-                       verticalAlign=middle;fontSize=11;fontColor=#555555;"
-                vertex="1" parent="1">
-          <mxGeometry x="405" y="893" width="80" height="22" as="geometry"/>
+        <mxCell id="legend-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#cccccc;                        strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="55" width="600" x="10" y="875" as="geometry" />
         </mxCell>
-
-        <!-- Ligne include -->
-        <mxCell id="legend-incl-line" value=""
-                style="endArrow=open;endSize=12;html=1;strokeColor=#666666;strokeWidth=1.5;dashed=1;"
-                edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="500" y="905" as="sourcePoint"/>
-            <mxPoint x="560" y="905" as="targetPoint"/>
+        <mxCell id="legend-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;                        verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#333333;" value="Légende :" vertex="1">
+          <mxGeometry height="20" width="70" x="25" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-assoc-line" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="110" y="900" as="sourcePoint" />
+            <mxPoint x="180" y="900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="legend-incl-text" value="&lt;&lt;include&gt;&gt; (obligatoire)"
-                style="text;html=1;strokeColor=none;fillColor=none;align=left;
-                       verticalAlign=middle;fontSize=11;fontColor=#555555;"
-                vertex="1" parent="1">
-          <mxGeometry x="565" y="893" width="160" height="22" as="geometry"/>
+        <mxCell id="legend-assoc-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;                        verticalAlign=middle;fontSize=11;fontColor=#555555;" value="Association" vertex="1">
+          <mxGeometry height="22" width="80" x="185" y="888" as="geometry" />
         </mxCell>
-
-        <!-- ============================================================ -->
-        <!-- NOTE PÉDAGOGIQUE                                             -->
-        <!-- ============================================================ -->
-        <mxCell id="note-box" value="Note : chaque acteur DOIT d'abord s'authentifier.&lt;br&gt;La flèche &lt;&lt;include&gt;&gt; signifie que « Créer une séance »&lt;br&gt;déclenche obligatoirement « Générer QR Code »."
-                style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#81c784;
-                       fontColor=#2e7d32;fontSize=11;align=left;spacingLeft=10;"
-                vertex="1" parent="1">
-          <mxGeometry x="850" y="870" width="270" height="65" as="geometry"/>
+        <mxCell id="legend-incl-line" edge="1" parent="1" style="endArrow=open;endSize=12;html=1;strokeColor=#666666;strokeWidth=1.5;dashed=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="280" y="900" as="sourcePoint" />
+            <mxPoint x="340" y="900" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-
+        <mxCell id="legend-incl-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;                        verticalAlign=middle;fontSize=11;fontColor=#555555;" value="&lt;&lt;include&gt;&gt; (obligatoire)" vertex="1">
+          <mxGeometry height="22" width="160" x="345" y="888" as="geometry" />
+        </mxCell>
+        <mxCell id="note-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#81c784;                        fontColor=#2e7d32;fontSize=11;align=left;spacingLeft=10;" value="Note : chaque acteur DOIT d&#39;abord s&#39;authentifier.&lt;br&gt;La flèche &lt;&lt;include&gt;&gt; signifie que « Créer une séance »&lt;br&gt;déclenche obligatoirement « Générer QR Code »." vertex="1">
+          <mxGeometry height="65" width="270" x="660" y="865" as="geometry" />
+        </mxCell>
+        <mxCell id="YEhCuzTfeC7jsnpgU1j5-5" edge="1" parent="1" source="actor-enseignant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.391;entryY=0.97;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=light-dark(#27AE60,#FFFFFF);startArrow=none;startFill=0;endArrow=none;endFill=0;" target="uc-creer-seance">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YEhCuzTfeC7jsnpgU1j5-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" value="&lt;b&gt;&lt;u&gt;Cas d&#39;Usage : SNGP--Système Numérique de Gestion des Présences&lt;/u&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="420" x="180" y="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

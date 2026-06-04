@@ -1,0 +1,282 @@
+<mxfile host="app.diagrams.net" agent="hermes" version="24.0.0">
+  <diagram name="Scanner QR Code" id="seq-scan">
+    <mxGraphModel dx="1400" dy="950" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1" page="1"
+                  pageScale="1" pageWidth="1350" pageHeight="870">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- TITRE -->
+        <mxCell id="title" value="Diagramme de Séquence UML — Scanner QR Code (Enregistrement Présence)"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#0f2e59;"
+                vertex="1" parent="1">
+          <mxGeometry x="250" y="10" width="800" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- EN-TÊTES                                                     -->
+        <!-- ============================================================ -->
+        <mxCell id="head-etud" value="Étudiant"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0f2e59;
+                       strokeColor=#0a1f3d;fontColor=#fff;fontStyle=1;fontSize=14;"
+                vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-dash" value=":dashboard.php"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a75a8;
+                       strokeColor=#2a5588;fontColor=#fff;fontStyle=1;fontSize=14;"
+                vertex="1" parent="1">
+          <mxGeometry x="290" y="60" width="160" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-ctrl" value=":PresenceControleur"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27ae60;
+                       strokeColor=#1e7e34;fontColor=#fff;fontStyle=1;fontSize=14;"
+                vertex="1" parent="1">
+          <mxGeometry x="560" y="60" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-conn" value=":ConnexionBDD"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d4af37;
+                       strokeColor=#b8960f;fontColor=#fff;fontStyle=1;fontSize=14;"
+                vertex="1" parent="1">
+          <mxGeometry x="850" y="60" width="150" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-mysql" value="MySQL"
+                style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c0392b;
+                       strokeColor=#a02d1f;fontColor=#fff;fontStyle=1;fontSize=14;"
+                vertex="1" parent="1">
+          <mxGeometry x="1110" y="60" width="150" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- STÉRÉOTYPES -->
+        <mxCell id="st-etud" value="&lt;&lt;acteur&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       fontColor=#0f2e59;fontSize=9;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="140" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="st-dash" value="&lt;&lt;vue&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       fontColor=#3a75a8;fontSize=9;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="290" y="100" width="160" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="st-ctrl" value="&lt;&lt;contrôleur&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       fontColor=#27ae60;fontSize=9;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="100" width="180" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="st-conn" value="&lt;&lt;modèle&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       fontColor=#b8960f;fontSize=9;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="850" y="100" width="150" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="st-mysql" value="&lt;&lt;SGBD&gt;&gt;"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       fontColor=#c0392b;fontSize=9;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="100" width="150" height="15" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- LIGNES DE VIE                                                -->
+        <!-- ============================================================ -->
+        <mxCell id="life-etud" value="" style="endArrow=none;html=1;strokeColor=#0f2e59;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="100" y="120" as="sourcePoint"/><mxPoint x="100" y="810" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="life-dash" value="" style="endArrow=none;html=1;strokeColor=#3a75a8;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="370" y="120" as="sourcePoint"/><mxPoint x="370" y="810" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="life-ctrl" value="" style="endArrow=none;html=1;strokeColor=#27ae60;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="650" y="120" as="sourcePoint"/><mxPoint x="650" y="810" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="life-conn" value="" style="endArrow=none;html=1;strokeColor=#d4af37;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="925" y="120" as="sourcePoint"/><mxPoint x="925" y="810" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="life-mysql" value="" style="endArrow=none;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="1185" y="120" as="sourcePoint"/><mxPoint x="1185" y="810" as="targetPoint"/></mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- BARRES D'ACTIVATION                                          -->
+        <!-- ============================================================ -->
+        <mxCell id="act-dash" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a75a8;strokeColor=#2a5588;opacity=35;" vertex="1" parent="1">
+          <mxGeometry x="358" y="155" width="24" height="630" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-ctrl" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#1e7e34;opacity=35;" vertex="1" parent="1">
+          <mxGeometry x="638" y="205" width="24" height="580" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-conn" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d4af37;strokeColor=#b8960f;opacity=35;" vertex="1" parent="1">
+          <mxGeometry x="913" y="260" width="24" height="340" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-mysql" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c0392b;strokeColor=#a02d1f;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="1173" y="305" width="24" height="240" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- MESSAGES D'APPEL                                             -->
+        <!-- ============================================================ -->
+        <!-- 1. Étudiant → dashboard -->
+        <mxCell id="m1-badge" value="①" style="text;html=1;strokeColor=none;fillColor=#0f2e59;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="147" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg1" value="Scanne ou saisit le token QR Code"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#0f2e59;strokeWidth=2;fontSize=12;fontColor=#0f2e59;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="100" y="155" as="sourcePoint"/><mxPoint x="358" y="155" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 2. dashboard → PresenceControleur -->
+        <mxCell id="m2-badge" value="②" style="text;html=1;strokeColor=none;fillColor=#3a75a8;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="197" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg2" value="POST (qr_token)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#3a75a8;strokeWidth=2;fontSize=12;fontColor=#3a75a8;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="382" y="205" as="sourcePoint"/><mxPoint x="638" y="205" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 3. PresenceControleur → ConnexionBDD : prepare SELECT -->
+        <mxCell id="m3-badge" value="③" style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="765" y="252" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg3" value="prepare(SELECT * FROM seances WHERE qr_code_token = ?)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#27ae60;strokeWidth=2;fontSize=12;fontColor=#27ae60;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="662" y="260" as="sourcePoint"/><mxPoint x="913" y="260" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 4. ConnexionBDD → MySQL -->
+        <mxCell id="m4-badge" value="④" style="text;html=1;strokeColor=none;fillColor=#d4af37;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="297" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg4" value="execute([$qr_token])"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#d4af37;strokeWidth=2;fontSize=12;fontColor=#b8960f;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="937" y="305" as="sourcePoint"/><mxPoint x="1173" y="305" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 5. MySQL → ConnexionBDD -->
+        <mxCell id="m5-badge" value="⑤" style="text;html=1;strokeColor=none;fillColor=#c0392b;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="342" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg5" value="fetch() → $seance | false"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;fontSize=12;fontColor=#c0392b;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="1173" y="350" as="sourcePoint"/><mxPoint x="937" y="350" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 6. ConnexionBDD → PresenceControleur -->
+        <mxCell id="m6-badge" value="⑥" style="text;html=1;strokeColor=none;fillColor=#d4af37;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="765" y="377" width="20" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg6" value="$seance (array | false)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#d4af37;strokeWidth=2;dashed=1;fontSize=12;fontColor=#b8960f;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="913" y="385" as="sourcePoint"/><mxPoint x="662" y="385" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FRAGMENT COMBINÉ : alt (3 sections)                           -->
+        <!-- ============================================================ -->
+        <mxCell id="alt-bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f4ff;strokeColor=#4a9eed;strokeWidth=2;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="295" y="420" width="930" height="350" as="geometry"/>
+        </mxCell>
+        <mxCell id="alt-label" value="alt" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4a9eed;strokeColor=#4a9eed;fontColor=#fff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="295" y="420" width="45" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- === SECTION 1 : Token valide, 1ère tentative === -->
+        <mxCell id="guard1" value="[ token valide  +  1ère tentative ]"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;fontColor=#27ae60;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="423" width="230" height="18" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s1-sep" value="" style="endArrow=none;html=1;strokeColor=#4a9eed;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="295" y="545" as="sourcePoint"/><mxPoint x="1225" y="545" as="targetPoint"/></mxGeometry>
+        </mxCell>
+
+        <!-- 7a. PresenceControleur → ConnexionBDD : INSERT -->
+        <mxCell id="m7a-badge" value="⑦a" style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="765" y="452" width="22" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg7a" value="prepare(INSERT INTO presences ...)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#27ae60;strokeWidth=2;fontSize=12;fontColor=#27ae60;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="662" y="460" as="sourcePoint"/><mxPoint x="913" y="460" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 7b. ConnexionBDD → MySQL : execute INSERT -->
+        <mxCell id="m7b-badge" value="⑦b" style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="490" width="22" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg7b" value="execute([$seance_id, $etudiant_id])"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#27ae60;strokeWidth=2;fontSize=12;fontColor=#27ae60;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="937" y="498" as="sourcePoint"/><mxPoint x="1173" y="498" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 7c. OK → dashboard -->
+        <mxCell id="m7c-badge" value="⑦c" style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="522" width="22" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg7c" value="header(Location: dashboard.php?success=1)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#27ae60;strokeWidth=2;dashed=1;fontSize=11;fontColor=#27ae60;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="638" y="530" as="sourcePoint"/><mxPoint x="382" y="530" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- === SECTION 2 : Token valide, DOUBLON === -->
+        <mxCell id="guard2" value="[ token valide  +  DOUBLON ]"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;fontColor=#e67e22;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="548" width="230" height="18" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s2-sep" value="" style="endArrow=none;html=1;strokeColor=#4a9eed;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="295" y="660" as="sourcePoint"/><mxPoint x="1225" y="660" as="targetPoint"/></mxGeometry>
+        </mxCell>
+
+        <!-- 8a. PDOException catch -->
+        <mxCell id="m8a-badge" value="⑧a" style="text;html=1;strokeColor=none;fillColor=#e67e22;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="765" y="575" width="22" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg8a" value="PDOException (SQLSTATE[23000])"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#e67e22;strokeWidth=2;dashed=1;fontSize=12;fontColor=#e67e22;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="913" y="583" as="sourcePoint"/><mxPoint x="662" y="583" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 8b. Redirection doublon -->
+        <mxCell id="m8b-badge" value="⑧b" style="text;html=1;strokeColor=none;fillColor=#e67e22;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="615" width="22" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg8b" value="header(Location: dashboard.php?erreur=doublon)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#e67e22;strokeWidth=2;dashed=1;fontSize=11;fontColor=#e67e22;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="638" y="623" as="sourcePoint"/><mxPoint x="382" y="623" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 8c. dashboard → Étudiant : déjà enregistré -->
+        <mxCell id="m8c-badge" value="⑧c" style="text;html=1;strokeColor=none;fillColor=#e67e22;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="645" width="22" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg8c" value="&quot;Vous êtes déjà enregistré pour cette séance&quot;"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#e67e22;strokeWidth=2;dashed=1;fontSize=11;fontColor=#e67e22;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="358" y="653" as="sourcePoint"/><mxPoint x="100" y="653" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- === SECTION 3 : Token INVALIDE === -->
+        <mxCell id="guard3" value="[ token invalide ]"
+                style="text;html=1;strokeColor=none;fillColor=none;align=left;fontColor=#c0392b;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="663" width="150" height="18" as="geometry"/>
+        </mxCell>
+
+        <!-- 9a. Redirection token invalide -->
+        <mxCell id="m9a-badge" value="⑨a" style="text;html=1;strokeColor=none;fillColor=#c0392b;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="695" width="22" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg9a" value="header(Location: dashboard.php?erreur=token_invalide)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;fontSize=11;fontColor=#c0392b;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="638" y="703" as="sourcePoint"/><mxPoint x="382" y="703" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 9b. dashboard → Étudiant : token invalide -->
+        <mxCell id="m9b-badge" value="⑨b" style="text;html=1;strokeColor=none;fillColor=#c0392b;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="733" width="22" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg9b" value="&quot;QR Code invalide ou séance inexistante&quot;"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;fontSize=11;fontColor=#c0392b;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="358" y="741" as="sourcePoint"/><mxPoint x="100" y="741" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
