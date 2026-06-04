@@ -1,0 +1,155 @@
+<mxfile host="app.diagrams.net" agent="hermes" version="24.0.0">
+  <diagram name="Gérer les utilisateurs" id="seq-users">
+    <mxGraphModel dx="1200" dy="750" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1" page="1"
+                  pageScale="1" pageWidth="1120" pageHeight="720">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="Diagramme de Séquence UML — Gérer les utilisateurs (création)"
+                style="text;html=1;strokeColor=none;fillColor=none;align=center;
+                       verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#0f2e59;"
+                vertex="1" parent="1">
+          <mxGeometry x="200" y="8" width="650" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- EN-TÊTES -->
+        <mxCell id="head-admin" value="Administrateur" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0f2e59;strokeColor=#0a1f3d;fontColor=#fff;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="20" y="55" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-vue" value=":admin.php" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a75a8;strokeColor=#2a5588;fontColor=#fff;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="235" y="55" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-ctrl" value=":UserControleur" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#1e7e34;fontColor=#fff;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="450" y="55" width="150" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-conn" value=":ConnexionBDD" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d4af37;strokeColor=#b8960f;fontColor=#fff;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="690" y="55" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="head-mysql" value="MySQL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c0392b;strokeColor=#a02d1f;fontColor=#fff;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="920" y="55" width="110" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- STÉRÉOTYPES -->
+        <mxCell id="st-a" value="&lt;&lt;acteur&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#0f2e59;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="20" y="95" width="130" height="15" as="geometry"/></mxCell>
+        <mxCell id="st-v" value="&lt;&lt;vue&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#3a75a8;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="235" y="95" width="130" height="15" as="geometry"/></mxCell>
+        <mxCell id="st-c" value="&lt;&lt;contrôleur&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#27ae60;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="450" y="95" width="150" height="15" as="geometry"/></mxCell>
+        <mxCell id="st-b" value="&lt;&lt;modèle&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#b8960f;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="690" y="95" width="140" height="15" as="geometry"/></mxCell>
+        <mxCell id="st-m" value="&lt;&lt;SGBD&gt;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontColor=#c0392b;fontSize=9;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="920" y="95" width="110" height="15" as="geometry"/></mxCell>
+
+        <!-- LIGNES DE VIE -->
+        <mxCell id="l1" value="" style="endArrow=none;html=1;strokeColor=#0f2e59;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="85" y="115" as="sourcePoint"/><mxPoint x="85" y="660" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="l2" value="" style="endArrow=none;html=1;strokeColor=#3a75a8;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="300" y="115" as="sourcePoint"/><mxPoint x="300" y="660" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="l3" value="" style="endArrow=none;html=1;strokeColor=#27ae60;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="525" y="115" as="sourcePoint"/><mxPoint x="525" y="660" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="l4" value="" style="endArrow=none;html=1;strokeColor=#d4af37;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="760" y="115" as="sourcePoint"/><mxPoint x="760" y="660" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="l5" value="" style="endArrow=none;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="975" y="115" as="sourcePoint"/><mxPoint x="975" y="660" as="targetPoint"/></mxGeometry></mxCell>
+
+        <!-- BARRES D'ACTIVATION -->
+        <mxCell id="act-vue" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a75a8;strokeColor=#2a5588;opacity=35;" vertex="1" parent="1"><mxGeometry x="288" y="155" width="24" height="460" as="geometry"/></mxCell>
+        <mxCell id="act-ctrl" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#1e7e34;opacity=35;" vertex="1" parent="1"><mxGeometry x="513" y="195" width="24" height="420" as="geometry"/></mxCell>
+        <mxCell id="act-conn" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d4af37;strokeColor=#b8960f;opacity=35;" vertex="1" parent="1"><mxGeometry x="748" y="280" width="24" height="110" as="geometry"/></mxCell>
+        <mxCell id="act-mysql" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c0392b;strokeColor=#a02d1f;opacity=30;" vertex="1" parent="1"><mxGeometry x="963" y="315" width="24" height="60" as="geometry"/></mxCell>
+
+        <!-- MESSAGES -->
+        <!-- 1 -->
+        <mxCell id="b1" value="①" style="text;html=1;strokeColor=none;fillColor=#0f2e59;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="178" y="148" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg1" value="Remplit formulaire (matricule, nom, email, rôle, mot de passe)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#0f2e59;strokeWidth=2;fontSize=12;fontColor=#0f2e59;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="85" y="156" as="sourcePoint"/><mxPoint x="288" y="156" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 2 -->
+        <mxCell id="b2" value="②" style="text;html=1;strokeColor=none;fillColor=#3a75a8;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="395" y="188" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg2" value="POST (matricule, nom, prenom, email, mot_de_passe, role)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#3a75a8;strokeWidth=2;fontSize=12;fontColor=#3a75a8;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="312" y="196" as="sourcePoint"/><mxPoint x="513" y="196" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 3. Hash (self) -->
+        <mxCell id="b3" value="③" style="text;html=1;strokeColor=none;fillColor=#8e44ad;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="560" y="238" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg3" value="password_hash($mdp, PASSWORD_BCRYPT)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#8e44ad;strokeWidth=2;fontSize=12;fontColor=#8e44ad;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="537" y="260" as="sourcePoint"/><mxPoint x="537" y="232" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 4 -->
+        <mxCell id="b4" value="④" style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="625" y="278" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg4" value="prepare(INSERT INTO utilisateurs (matricule, nom, prenom, email, mot_de_passe, role) VALUES ...)"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#27ae60;strokeWidth=2;fontSize=11;fontColor=#27ae60;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="537" y="295" as="sourcePoint"/><mxPoint x="748" y="295" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 5 -->
+        <mxCell id="b5" value="⑤" style="text;html=1;strokeColor=none;fillColor=#d4af37;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="850" y="318" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg5" value="execute([matricule, nom, email, hash, role])"
+                style="endArrow=block;endFill=1;html=1;strokeColor=#d4af37;strokeWidth=2;fontSize=12;fontColor=#b8960f;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="772" y="326" as="sourcePoint"/><mxPoint x="963" y="326" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 6 -->
+        <mxCell id="b6" value="⑥" style="text;html=1;strokeColor=none;fillColor=#c0392b;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="850" y="353" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg6" value="INSERT OK | erreur"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;fontSize=12;fontColor=#c0392b;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="963" y="361" as="sourcePoint"/><mxPoint x="772" y="361" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 7 -->
+        <mxCell id="b7" value="⑦" style="text;html=1;strokeColor=none;fillColor=#d4af37;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="625" y="383" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg7" value="succès | PDOException"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#d4af37;strokeWidth=2;dashed=1;fontSize=12;fontColor=#b8960f;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="748" y="391" as="sourcePoint"/><mxPoint x="537" y="391" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FRAGMENT ALT (3 branches) -->
+        <!-- ============================================================ -->
+        <mxCell id="alt-bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f4ff;strokeColor=#4a9eed;strokeWidth=2;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="220" y="425" width="800" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="alt-label" value="alt" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4a9eed;strokeColor=#4a9eed;fontColor=#fff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="220" y="425" width="40" height="22" as="geometry"/>
+        </mxCell>
+
+        <!-- Garde 1 -->
+        <mxCell id="g1" value="[ succès ]" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontColor=#27ae60;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="270" y="427" width="80" height="18" as="geometry"/></mxCell>
+        <mxCell id="s1" value="" style="endArrow=none;html=1;strokeColor=#4a9eed;strokeWidth=1;dashed=1;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="220" y="488" as="sourcePoint"/><mxPoint x="1020" y="488" as="targetPoint"/></mxGeometry></mxCell>
+
+        <!-- Garde 2 -->
+        <mxCell id="g2" value="[ doublon matricule ]" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontColor=#e67e22;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="270" y="491" width="150" height="18" as="geometry"/></mxCell>
+        <mxCell id="s2" value="" style="endArrow=none;html=1;strokeColor=#4a9eed;strokeWidth=1;dashed=1;" edge="1" parent="1"><mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="220" y="552" as="sourcePoint"/><mxPoint x="1020" y="552" as="targetPoint"/></mxGeometry></mxCell>
+
+        <!-- Garde 3 -->
+        <mxCell id="g3" value="[ doublon email ]" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontColor=#c0392b;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="270" y="555" width="130" height="18" as="geometry"/></mxCell>
+
+        <!-- 8a. Succès -->
+        <mxCell id="b8a" value="⑧a" style="text;html=1;strokeColor=none;fillColor=#27ae60;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="400" y="448" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg8a" value="header(Location: admin.php?success=1)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#27ae60;strokeWidth=2;dashed=1;fontSize=11;fontColor=#27ae60;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="513" y="456" as="sourcePoint"/><mxPoint x="312" y="456" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 8b. Doublon matricule -->
+        <mxCell id="b8b" value="⑧b" style="text;html=1;strokeColor=none;fillColor=#e67e22;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="400" y="515" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg8b" value="header(Location: admin.php?erreur=matricule)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#e67e22;strokeWidth=2;dashed=1;fontSize=11;fontColor=#e67e22;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="513" y="523" as="sourcePoint"/><mxPoint x="312" y="523" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- 8c. Doublon email -->
+        <mxCell id="b8c" value="⑧c" style="text;html=1;strokeColor=none;fillColor=#c0392b;rounded=1;fontColor=#fff;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1"><mxGeometry x="400" y="578" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="msg8c" value="header(Location: admin.php?erreur=email)"
+                style="endArrow=open;endFill=0;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;fontSize=11;fontColor=#c0392b;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry"><mxPoint x="513" y="586" as="sourcePoint"/><mxPoint x="312" y="586" as="targetPoint"/><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Note -->
+        <mxCell id="note" value="🔒 password_hash() avec bcrypt (coût 10) génère un hash unique même pour 2 mots de passe identiques.&#xa;⚠️ Les contraintes UNIQUE sur matricule et email déclenchent PDOException (SQLSTATE[23000]) en cas de doublon."
+                style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontColor=#5d4037;fontSize=11;align=left;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="645" width="750" height="45" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
