@@ -1,0 +1,18 @@
+# Fichiers XAMPP / environnement local
+xampp/
+*.log
+
+# Fichiers de configuration sensibles
+config.local.php
+
+# Dépendances (si on utilise Composer plus tard)
+/vendor/
+
+# Fichiers OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# IDE
+.vscode/
+.idea/

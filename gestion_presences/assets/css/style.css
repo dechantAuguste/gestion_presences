@@ -1,0 +1,308 @@
+/* ============================================================
+   SNGP - Système Numérique de Gestion des Présences
+   Palette académique : Bleu Oxford, Bleu Steel, Or
+   ============================================================ */
+
+:root {
+    --primary: #0f2e59;
+    --secondary: #3a75a8;
+    --accent: #d4af37;
+    --background: #f7f9fc;
+    --success: #27ae60;
+    --error: #c0392b;
+    --text: #2c3e50;
+    --text-light: #7f8c8d;
+    --white: #ffffff;
+    --border: #e1e8ed;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Fira Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Login */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.login-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.login-card h1 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Header */
+.header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Cards */
+.card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border);
+}
+
+.card h2 {
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(58, 117, 168, 0.15);
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: #0a2344;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.table th {
+    background: var(--background);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+}
+
+.table tbody tr:hover {
+    background: rgba(58, 117, 168, 0.04);
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-present {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-en_retard {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge-absent {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Alert */
+.alert {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* QR Code */
+.qr-section {
+    text-align: center;
+}
+
+.qr-code {
+    border: 4px solid var(--primary);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: var(--text-light);
+}
+
+code {
+    background: var(--background);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .login-card {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
